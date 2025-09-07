@@ -16,13 +16,13 @@
     </form>
 <?php
 // filepath: c:\xampp\htdocs\astroneer\register.php
-include '/models/conexao.php'; // arquivo com conexão ao banco
+include 'conexao.php'; // arquivo com conexão ao banco
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // senha segura
 
-$sql = "INSERT INTO usuario (name, email, senha) VALUES (?, ?, ?)";
+$sql = "INSERT INTO usuario (amen, email, senha) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $name, $email, $senha);
 
