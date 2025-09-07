@@ -9,13 +9,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #6039f0;
-    margin-left: 85px; /* Espaço para a sidebar fixa */
 }
 
 /* Imagens */
 img {
     width: 100px;
 }
+
+
 
 /* Navbar fixa no topo */
 header nav.global-navigation {
@@ -26,11 +27,10 @@ header nav.global-navigation {
     padding: 10px 20px;
     position: fixed;
     top: 0;
-    left: 85px; /* Espaço para a sidebar */
-    width: calc(100% - 85px);
+    width: 100%;
     z-index: 1001;
-    height: 60px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    height: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Container dos itens da navbar */
@@ -44,9 +44,9 @@ header nav .container {
 .search-box {
     display: flex;
     align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-    border: 2px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+    border: 1px solid #3b3b3b;
     background: #f5f5f5;
 }
 
@@ -63,85 +63,62 @@ header nav .container {
     color: #6039f0;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 16px;
     border-radius: 4px;
     transition: background 0.2s;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #3b3b3b;
 }
 
 .navigation a:hover {
-    background: #ece6ff;
-}
-
-/* Sidebar fixa à esquerda */
-.global-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 85px;
-    height: 100%;
-    background-color: #222;
-    padding-top: 60px; /* Espaço para a navbar fixa */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    z-index: 1002;
-}
-
-.global-sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.global-sidebar button {
-    width: 48px;
-    height: 48px;
-    background: #444;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.global-sidebar button:hover {
-    background: #6039f0;
+    background: #d8d2ff;
 }
 
 /* Conteúdo principal */
 main {
-    margin-top: 80px; /* Espaço para a navbar fixa */
-    padding: 24px;
+    background: #ffffff;
+    margin-top: 100px;
+    padding: 50px;
     color: #fff;
+    border-radius: 10px;
+    gap: 20px;
+    color: rgb(87, 57, 57);
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 16px;
-    background: #222;
-    color: #fff;
-    position: relative;
-    margin-top: auto;
-    
+    border-top: 1px solid #333;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
 }
 
-/* Responsividade básica */
+div.body-content {
+    /** evitar que o conteudo fique por baixo do rodapé **/
+    margin-bottom: 40px;
+}
+
+/* Responsividade */
 @media (max-width: 700px) {
     body {
         margin-left: 0;
     }
+
     .global-sidebar {
         width: 60px;
         padding-top: 50px;
     }
+
     header nav.global-navigation {
         left: 0;
         width: 100%;
         padding: 8px 8px;
     }
+
     main {
         margin-top: 70px;
         padding: 12px;
