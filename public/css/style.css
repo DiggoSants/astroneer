@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: blueviolet;
 }
 
 nav {
@@ -13,10 +14,21 @@ nav {
     padding: 10px 20px;
 }
 
-nav .container {
-    display: flex;
+.global-top-navigation {
+    --fandom-top-nav-icon-color: var(--fandom-secondary-button-color);
+    --fandom-top-nav-icon-color--hover: var(--fandom-global-nav-link-color);
     align-items: center;
-    gap: 15px;
+    background-color: var(--fandom-global-nav-background-color);
+    display: flex
+;
+    height: 46px;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 18px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
 }
 
 nav .container .search {
@@ -25,3 +37,4 @@ nav .container .search {
     border-radius: 5px;
     border: none;
 }
+
