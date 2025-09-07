@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
+    <link rel="stylesheet" href="public/css/lr.css">
 </head>
 
 <body>
@@ -15,7 +16,6 @@
         <button type="submit">Registrar</button>
     </form>
 <?php
-// filepath: c:\xampp\htdocs\astroneer\register.php
 include 'conexao.php'; // arquivo com conexão ao banco
 
 $name = $_POST['name'];
